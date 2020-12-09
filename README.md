@@ -8,3 +8,4 @@ Discussed:
 -Super calls inside constructors
 -Clarified methods we are overwriting
 -Return types for add and set
+-How to get ArrayList
