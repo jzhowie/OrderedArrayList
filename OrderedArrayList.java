@@ -10,11 +10,8 @@ public OrderedArrayList (int capacity) {
 	super(capacity);
 }
 
-public int sort (T input) {
+private int sort (T input) {
 	int index = 0;
-	if (size() < 1) {
-		return index;
-	}
 	for (int i = 0; i < size(); i++) {
 		if ((i == 0 || input.compareTo(get(i-1)) >= 0) && (i == size() || input.compareTo(get(i)) <= -1)) {
 			index = i;
@@ -38,5 +35,11 @@ public void add (int index, T element) {
 	}
 	super.add(sort(element), element);
 	return;
+}
+
+public T set (int index, T element) {
+	super.remove(index);
+	add(element);
+	return element;
 }
 }
