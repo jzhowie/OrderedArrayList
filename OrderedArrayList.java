@@ -13,7 +13,7 @@ public OrderedArrayList (int capacity) {
 private int sort (T input) {
 	int index = 0;
 	for (int i = 0; i < size(); i++) {
-		if ((i == 0 || input.compareTo(get(i-1)) >= 0) && (i == size() || input.compareTo(get(i)) <= -1)) {
+		if ((i == 0 || input.compareTo(get(i-1)) >= 0) && input.compareTo(get(i)) <= -1) {
 			index = i;
 			return index;
 		}
